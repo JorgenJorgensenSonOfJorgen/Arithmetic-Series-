@@ -1,15 +1,17 @@
-let d;
-let t1;
-let n;
+//Arithmetic Series Calculator
 document.getElementById("calculate").addEventListener("click", calculate)
 
 function calculate(){
-    d = Number(document.getElementById("d").value)
-    t1 = Number(document.getElementById("t1").value)
-    n = Number(document.getElementById("n").value)
+    //inputs
+    let d = Number(document.getElementById("d").value)
+    let t1 = Number(document.getElementById("t1").value)
+    let n = Number(document.getElementById("n").value)
+    let output = document.getElementById("output")
+    //process
     if (n < 0 || Math.round(n) == !n) {
-        document.getElementById("output").innerHTML = "number of terms must be whole number"
+        output.innerHTML = "number of terms must be whole number"
     } else {
-    document.getElementById("output").innerHTML = n/2*(2*t1 + d*(n-1))
+        //output
+        output.innerHTML = n/2*(2*t1 + d*(n-1))
     }
 }
