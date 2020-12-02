@@ -17,8 +17,8 @@ function updateInput(){
 function calculate(d,t1,n){
     //process
     if (n < 0 || Math.round(n) != n) {
-        return output.innerHTML = "number of terms must be whole number"
+        return "number of terms must be whole number"
     } else {
-        return output.innerHTML = n/2*(2*t1 + d*(n-1))
+        return n/2*(2*t1 + d*(n-1))
     }
 }
